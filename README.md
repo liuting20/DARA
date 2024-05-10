@@ -12,4 +12,4 @@ In this paper, we explore applying parameter-efficient transfer learning (PETL) 
 :sparkling_heart: We confirm that the relevant code and implementation details will be uploaded by **June**. Please be patient.
 
 ## Contact
-For any question about our paper or code, please contact [Ting Liu](liuting20@nudt.edu.cn) or [Xuyang Liu](liuxuyang@stu.scu.edu.cn).
+For any question about our paper or code, please contact [Ting Liu](mailto:liuting20@nudt.edu.cn) or [Xuyang Liu](mailto:liuxuyang@stu.scu.edu.cn).
