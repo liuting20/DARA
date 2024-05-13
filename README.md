@@ -11,5 +11,18 @@ In this paper, we explore applying parameter-efficient transfer learning (PETL) 
 
 :pushpin: We confirm that the relevant code and implementation details will be uploaded by **June**. Please be patient.
 
+## Citation
+Please consider citing our paper in your publications, if our findings help your research.
+```bibtex
+@misc{liu2024dara,
+      title={{DARA}: Domain- and Relation-aware Adapters Make Parameter-efficient Tuning for Visual Grounding}, 
+      author={Ting Liu and Xuyang Liu and Siteng Huang and Honggang Chen and Quanjun Yin and Long Qin and Donglin Wang and Yue Hu},
+      year={2024},
+      eprint={2405.06217},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
 ## Contact
 For any question about our paper or code, please contact [Ting Liu](mailto:liuting20@nudt.edu.cn) or [Xuyang Liu](mailto:liuxuyang@stu.scu.edu.cn).
