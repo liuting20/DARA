@@ -11,6 +11,43 @@ In this paper, we explore applying parameter-efficient transfer learning (PETL) 
 
 :pushpin: We confirm that the relevant code and implementation details will be uploaded by **June**. Please be patient.
 
+### Installation
+1.  Clone this repository.
+    ```
+    git clone https://github.com/liuting20/DARA.git
+    ```
+
+2.  Prepare for the running environment. 
+
+    ```
+     conda env create -f environment.yaml      pip install -r requirements.txt
+    ```
+
+### Getting Started
+
+Please refer to [GETTING_STARGTED.md](GETTING_STARTED.md) to learn how to prepare the datasets and pretrained checkpoints.
+
+
+### Training and Evaluation
+
+1.  Training
+    ```
+    CUDA_VISIBLE_DEVICES=0 python -u train.py --batch_size 64 --lr_bert 0.00001 --aug_crop --aug_scale --aug_translate --backbone resnet50 --detr_model ./checkpoints/detr-r50-referit.pth --bert_enc_num 12 --detr_enc_num 6 --dataset unc --max_query_len 20 --output_dir outputs/referit_r50 --epochs 90 --lr_drop 60
+    ```
+
+    We recommend to set --max_query_len 40 for RefCOCOg, and --max_query_len 20 for other datasets. 
+    
+    We recommend to set --epochs 180 (--lr_drop 120 acoordingly) for RefCOCO+, and --epochs 90 (--lr_drop 60 acoordingly) for other datasets. 
+
+2.  Evaluation
+    ```
+    CUDA_VISIBLE_DEVICES=0 python -u eval.py --batch_size 64 --num_workers 4 --bert_enc_num 12 --detr_enc_num 6 --backbone resnet50 --dataset unc --max_query_len 20 --eval_set testA --eval_model ./outputs/referit_r50/best_checkpoint.pth --output_dir ./outputs/referit_r50
+    ```
+
+### Acknowledge
+This codebase is partially based on [TransVG](https://github.com/djiajunustc/TransVG).
+
+
 ## Citation
 Please consider citing our paper in your publications, if our findings help your research.
 ```bibtex
