@@ -3,15 +3,29 @@ Official PyTorch implementation of our paper
 * **Title**: [DARA: Domain- and Relation-aware Adapters Make Parameter-efficient Tuning for Visual Grounding](https://arxiv.org/pdf/2405.06217)
 * **Authors**: [Ting Liu](https://github.com/liuting20), [Xuyang Liu](https://xuyang-liu16.github.io/), [Siteng Huang](https://kyonhuang.top/), [Honggang Chen](https://sites.google.com/view/honggangchen/), Quanjun Yin, Long Qin, [Donglin Wang](https://milab.westlake.edu.cn/), Yue Hu
 * **Institutes**: National University of Defense Technology, Sichuan University and Westlake University  <br>
+* **Conference**: 2024 IEEE International Conference on Multimedia and Expo (ICME)
 
-## Overview
+## :pushpin: Citation
+Please consider citing our paper in your publications, if our findings help your research.
+```bibtex
+@misc{liu2024dara,
+      title={{DARA}: Domain- and Relation-aware Adapters Make Parameter-efficient Tuning for Visual Grounding}, 
+      author={Ting Liu and Xuyang Liu and Siteng Huang and Honggang Chen and Quanjun Yin and Long Qin and Donglin Wang and Yue Hu},
+      year={2024},
+      eprint={2405.06217},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
+## :sparkles: Overview
 <p align="center"> <img src="overview.png" width="1000" align="center"> </p>
 
 In this paper, we explore applying parameter-efficient transfer learning (PETL) to efficiently transfer the pre-trained vision-language knowledge to VG. Specifically, we propose **DARA**, a novel PETL method comprising **D**omain-aware **A**dapters (DA Adapters) and **R**elation-aware **A**dapters (RA Adapters) for VG. DA Adapters first transfer intra-modality representations to be more fine-grained for the VG domain. Then RA Adapters share weights to bridge the relation between two modalities, improving spatial reasoning. Empirical results on widely-used benchmarks demonstrate that DARA achieves the best accuracy while saving numerous updated parameters compared to the full fine-tuning and other PETL methods. Notably, with only **2.13%** tunable backbone parameters, DARA improves average accuracy by **0.81%** across the three benchmarks compared to the baseline model.
 
 :pushpin: We confirm that the relevant code and implementation details will be uploaded after pulication. Please be patient.
 
-### Installation
+### :point_right: Installation
 1.  Clone this repository.
     ```
     git clone https://github.com/liuting20/DARA.git
@@ -23,12 +37,12 @@ In this paper, we explore applying parameter-efficient transfer learning (PETL) 
      conda env create -f environment.yaml      pip install -r requirements.txt
     ```
 
-### Getting Started
+### :point_right: Getting Started
 
 Please refer to [GETTING_STARGTED.md](GETTING_STARTED.md) to learn how to prepare the datasets and pretrained checkpoints.
 
 
-### Training and Evaluation
+### :point_right: Training and Evaluation
 
 1.  Training
     ```
@@ -44,22 +58,9 @@ Please refer to [GETTING_STARGTED.md](GETTING_STARTED.md) to learn how to prepar
     CUDA_VISIBLE_DEVICES=0 python -u eval.py --batch_size 64 --num_workers 4 --bert_enc_num 12 --detr_enc_num 6 --backbone resnet50 --dataset unc --max_query_len 20 --eval_set testA --eval_model ./outputs/referit_r50/best_checkpoint.pth --output_dir ./outputs/referit_r50
     ```
 
-### Acknowledge
+### :thumbsup: Acknowledge
 This codebase is partially based on [TransVG](https://github.com/djiajunustc/TransVG).
 
 
-## Citation
-Please consider citing our paper in your publications, if our findings help your research.
-```bibtex
-@misc{liu2024dara,
-      title={{DARA}: Domain- and Relation-aware Adapters Make Parameter-efficient Tuning for Visual Grounding}, 
-      author={Ting Liu and Xuyang Liu and Siteng Huang and Honggang Chen and Quanjun Yin and Long Qin and Donglin Wang and Yue Hu},
-      year={2024},
-      eprint={2405.06217},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-```
-
-## Contact
+## :e-mail: Contact
 For any question about our paper or code, please contact [Ting Liu](mailto:liuting20@nudt.edu.cn) or [Xuyang Liu](mailto:liuxuyang@stu.scu.edu.cn).
