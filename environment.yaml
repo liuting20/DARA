@@ -1,4 +1,4 @@
-name: transvg
+name: DARA
 channels:
   - pytorch
   - nvidia
