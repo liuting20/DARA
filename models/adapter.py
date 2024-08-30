@@ -1,25 +1,17 @@
-# --------------------------------------------------------
-# References:
-# https://github.com/jxhe/unify-parameter-efficient-tuning
-# --------------------------------------------------------
 
 import math
 import torch
 import torch.nn as nn
 
 
-class ShareAdapter(nn.Module):
+class RA_Adapter(nn.Module):
     def __init__(self,
                  d_model=128,
                  bottleneck=256,
-                 adapter_scalar="1"
                 ):
         super().__init__()
         self.n_embd = d_model
         self.up_size = bottleneck
-        # self.scale = float(adapter_scalar)
-
-      
         self.up_proj = nn.Linear(self.n_embd, self.up_size)
 
         with torch.no_grad():
@@ -32,13 +24,12 @@ class ShareAdapter(nn.Module):
         return up
 
 
-class Adapter_text(nn.Module):
+class DA_Adapter_text(nn.Module):
     def __init__(self,
                  d_model=768,
-                 bottleneck=128,
+                 bottleneck=16,
                  dropout=0.0,
                  decoder=False,
-                 init_option="lora",
                  adapter_scalar="0.1",
                  adapter_layernorm_option="in"):
         super().__init__()
@@ -99,13 +90,12 @@ class Adapter_text(nn.Module):
 
         return output
     
-class Adapter_vis(nn.Module):
+class DA_Adapter_vis(nn.Module):
     def __init__(self,
                  d_model=256,
-                 bottleneck=128,
+                 bottleneck=16,
                  dropout=0.0,
                  decoder=False,
-                 init_option="lora",
                  adapter_scalar="0.1",
                  adapter_layernorm_option="in"):
         super().__init__()
@@ -151,7 +141,6 @@ class Adapter_vis(nn.Module):
         down = self.non_linear_func(down)
         down = nn.functional.dropout(down, p=self.dropout, training=self.training)
 
-      
         if mode == 'visual':
             up = self.visual_up_proj(down)
        
