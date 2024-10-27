@@ -1,22 +1,15 @@
+<div align=center>
+  
 # DARA: Domain- and Relation-aware Adapters Make Parameter-efficient Tuning for Visual Grounding
-Official PyTorch implementation of our paper 
-* **Title**: [DARA: Domain- and Relation-aware Adapters Make Parameter-efficient Tuning for Visual Grounding](https://arxiv.org/pdf/2405.06217)
-* **Authors**: [Ting Liu](https://github.com/liuting20), [Xuyang Liu](https://xuyang-liu16.github.io/), [Siteng Huang](https://kyonhuang.top/), [Honggang Chen](https://sites.google.com/view/honggangchen/), Quanjun Yin, Long Qin, [Donglin Wang](https://milab.westlake.edu.cn/), Yue Hu
-* **Institutes**: National University of Defense Technology, Sichuan University and Westlake University  <br>
-* **Conference**: 2024 IEEE International Conference on Multimedia and Expo (ICME)
 
-## :pushpin: Citation
-Please consider citing our paper in your publications, if our findings help your research.
-```bibtex
-@misc{liu2024dara,
-      title={{DARA}: Domain- and Relation-aware Adapters Make Parameter-efficient Tuning for Visual Grounding}, 
-      author={Ting Liu and Xuyang Liu and Siteng Huang and Honggang Chen and Quanjun Yin and Long Qin and Donglin Wang and Yue Hu},
-      year={2024},
-      eprint={2405.06217},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-```
+**[Ting Liu](https://github.com/liuting20), [Xuyang Liu](https://xuyang-liu16.github.io/), [Siteng Huang](https://kyonhuang.top/), [Honggang Chen](https://sites.google.com/view/honggangchen/), Quanjun Yin, Long Qin, [Donglin Wang](https://milab.westlake.edu.cn/), Yue Hu**
+
+<p>
+<a href='https://arxiv.org/pdf/2405.06217'><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
+<a href='https://ieeexplore.ieee.org/document/10688132'><img src='https://img.shields.io/badge/Paper-ICME-blue'></a>
+</p>
+
+</div>
 
 ## :sparkles: Overview
 <p align="center"> <img src="overview.png" width="1000" align="center"> </p>
@@ -60,6 +53,19 @@ Please refer to [GETTING_STARGTED.md](GETTING_STARTED.md) to learn how to prepar
 ### :thumbsup: Acknowledge
 This codebase is partially based on [TransVG](https://github.com/djiajunustc/TransVG).
 
+
+## :pushpin: Citation
+Please consider citing our paper in your publications, if our findings help your research.
+```bibtex
+@misc{liu2024dara,
+      title={{DARA}: Domain- and Relation-aware Adapters Make Parameter-efficient Tuning for Visual Grounding}, 
+      author={Ting Liu and Xuyang Liu and Siteng Huang and Honggang Chen and Quanjun Yin and Long Qin and Donglin Wang and Yue Hu},
+      year={2024},
+      eprint={2405.06217},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
 
 ## :e-mail: Contact
 For any question about our paper or code, please contact [Ting Liu](mailto:liuting20@nudt.edu.cn) or [Xuyang Liu](mailto:liuxuyang@stu.scu.edu.cn).
