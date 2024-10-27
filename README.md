@@ -57,13 +57,11 @@ This codebase is partially based on [TransVG](https://github.com/djiajunustc/Tra
 ## :pushpin: Citation
 Please consider citing our paper in your publications, if our findings help your research.
 ```bibtex
-@misc{liu2024dara,
-      title={{DARA}: Domain- and Relation-aware Adapters Make Parameter-efficient Tuning for Visual Grounding}, 
-      author={Ting Liu and Xuyang Liu and Siteng Huang and Honggang Chen and Quanjun Yin and Long Qin and Donglin Wang and Yue Hu},
-      year={2024},
-      eprint={2405.06217},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{liu2024dara,
+  title={DARA: Domain-and Relation-aware Adapters Make Parameter-efficient Tuning for Visual Grounding},
+  author={Liu, Ting and Liu, Xuyang and Huang, Siteng and Chen, Honggang and Yin, Quanjun and Qin, Long and Wang, Donglin and Hu, Yue},
+  journal={arXiv preprint arXiv:2405.06217},
+  year={2024}
 }
 ```
 
